@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { fireEvent, render, screen } from '@testing-library/react-native';
 import { I18nextProvider } from 'react-i18next';
-import { MMKV } from 'react-native-mmkv';
+import { createMMKV, MMKV } from 'react-native-mmkv';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { SupportedLanguages } from '@/hooks/language/schema';
@@ -25,7 +25,7 @@ describe('Example screen should render correctly', () => {
   });
 
   beforeAll(() => {
-    storage = new MMKV();
+    storage = createMMKV();
   });
 
   test('the user change the language', () => {

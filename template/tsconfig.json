@@ -18,5 +18,5 @@
     "*.ts",
     ".prettierrc.mjs"
   ],
-  "exclude": ["node_modules", "_", "android", "ios"]
+  "exclude": ["**/node_modules", "_", "android", "ios", "**/Pods"]
 }
